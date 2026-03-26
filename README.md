@@ -1,2 +1,2 @@
 # anthro-pcb
-Canadian PCBs made and assembled in Alberta. Built using the Anthrobotics vertical fabrication stack.
+Canadian PCBs made and assembled in Alberta using Anthrobotics' vertically-integrated systems. 
