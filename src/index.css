@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-primary: #9cff93;
+  --color-on-primary: #006413;
+  --color-primary-fixed: #00fc40;
+  
+  --color-secondary: #ff7524;
+  --color-on-secondary: #3c1300;
+  
+  --color-tertiary: #8af2ff;
+  
+  --color-surface: #0d0f0e;
+  --color-surface-bright: #2a2d2b;
+  --color-surface-dim: #0d0f0e;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container-low: #121413;
+  --color-surface-container: #181a19;
+  --color-surface-container-high: #1e201f;
+  --color-surface-container-highest: #242625;
+  
+  --color-outline: #747674;
+  --color-outline-variant: #474847;
+  
+  --color-on-surface: #f7f6f4;
+  --color-on-surface-variant: #aaaba9;
+  
+  --color-error: #ff7351;
+
+  --radius-none: 0px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary;
+  }
+
+  * {
+    @apply border-none rounded-none;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(36, 38, 37, 0.6);
+    backdrop-filter: blur(20px);
+  }
+  
+  .laser-grid {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #242625 1px, transparent 1px);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #0d0f0e;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #474847;
+  }
+}
